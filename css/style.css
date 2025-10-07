@@ -46,7 +46,7 @@ header nav a {
 }
 
 header nav a:hover {
-  background: rgba(255,255,255,0.25);
+  background-color: #fff;
   color: #1e3c72;
   transform: scale(1.05);
 }

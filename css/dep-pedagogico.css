@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: #1e3c72;
   color: #fff;
   text-align: center;
   margin: 0;
@@ -11,6 +11,17 @@ header {
   padding: 30px 20px;
   background: rgba(0,0,0,0.3);
   border-bottom: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+
+a{
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 3vw;
+  left: 2vw;
 }
 
 header h1 {
