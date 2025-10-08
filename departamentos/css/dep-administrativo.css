@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background:  #2a5298;
+  background: linear-gradient(#ff0713dc, #000000);
+  height: 100vh;
   color: #fff;
   text-align: center;
   margin: 0;
@@ -9,17 +10,22 @@ body {
 
 header {
   padding: 30px 20px;
-  background: rgba(0,0,0,0.3);
   border-bottom: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+
+a{
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 3vw;
+  left: 2vw;
 }
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
 }
 
 main {
@@ -30,12 +36,4 @@ main {
 
 footer {
   margin: 30px 0;
-}
-
-a{
-  text-decoration: none;
-  color: #fff;
-  position: absolute;
-  top: 3vw;
-  left: 2vw;
 }
