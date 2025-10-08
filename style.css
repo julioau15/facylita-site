@@ -130,10 +130,15 @@ header nav a.cta:hover {
   font-size: 2rem;
 }
 
+.card-sobre{
+  height: fit-content;
+  margin: 15vh 0px;
+}
+
 .card-sobre p{
   font-size: 1.3rem;
   text-align: justify;
-  margin: 0px 2vh;
+  margin: 0px 12vw;
 }
 
 .cards-container {
