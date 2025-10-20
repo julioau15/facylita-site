@@ -1,0 +1,194 @@
+:root{
+  --Primary-color:#ff0713dc;
+  --Secondary-color:#000000;
+  --Gradient: linear-gradient(#ff0713dc, #000000);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--Gradient);
+}
+
+/* HEADER */
+header {
+  padding: 15px 20px;
+  border-bottom: 2px solid #fff;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 10px 0 5px;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.voltar a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 3vw;
+  left: 2vw;
+}
+
+/* MAIN */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+#aulas-online{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.aula-container{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aula-container .img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.aula-container .img .vestibular{
+  margin:0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* BOTÃO */
+.inscrever-btn {
+  background-color: green;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 10px;
+}
+
+.inscrever-btn:hover{
+  transform: scale(1.1);
+}
+
+/* IMAGENS */
+.aula-container img{
+  width: 300px;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+/* FORMULÁRIO */
+.form-inscricao {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  background-color: rgba(255,255,255,0.9);
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--Secondary-color);
+}
+
+.form-inscricao input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-inscricao button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.form-inscricao button:hover{
+  transform: scale(1.01);
+}
+
+/* PARAGRAFOS */
+.aula-container p{
+  text-align: justify;
+  margin: 0;
+}
+
+/* HR */
+hr{
+  width: 100%;
+  border: 1px solid #fff;
+  margin: 30px 0;
+}
+
+/* FOOTER */
+footer{
+  margin: 20px 0;
+  border-top: 2px solid #fff;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+  .aula-container{
+    width: 95%;
+    padding: 15px;
+  }
+
+  .aula-container img{
+    max-width: 150px;
+  }
+
+  .aula-container p{
+    font-size: 14px;
+  }
+
+  .inscrever-btn{
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .voltar a{
+    font-size: 1.2rem;
+  }
+
+  .voltar{
+    margin-top: 7vh;
+  }
+
+  #voltar{
+    top:4vh;
+    left:7vw;
+  }
+}

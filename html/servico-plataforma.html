@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviço: Plataforma Digital - Facylita</title>
+  <link rel="stylesheet" href="../css/servico-plataforma.css" />
+  <script>
+    function toggleForm(id){
+      const form = document.getElementById(id);
+      if(form.style.display === "flex"){
+        form.style.display = "none";
+      } else {
+        form.style.display = "flex";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="voltar">
+      <a id="voltar" href="../index.html">< Voltar</a>  
+      <h1>Plataforma Digital</h1>
+      <p>Videoaulas, simulados e exercícios interativos.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="aulas-online">
+
+      <!-- ENEM -->
+      <div class="aula-container">
+        <div class="img">
+          <h1 class="vestibular">ENEM</h1>
+          <img src="../img/enem.png" alt="ENEM">
+          <button class="inscrever-btn" onclick="toggleForm('form-enem')">Me Inscrever</button>
+        </div>
+        <div class="form-inscricao" id="form-enem">
+          <input type="text" placeholder="Nome completo" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Telefone" required>
+          <button class="finalizar" type="submit">Finalizar Inscrição</button>
+        </div>
+        <p>A plataforma digital oferece videoaulas completas de todas as áreas do conhecimento cobradas no ENEM, com conteúdos atualizados e simulados semanais para fixação. Ideal para quem deseja uma preparação acessível e dinâmica.</p>
+        <p><strong>Local:</strong> Online | <strong>Grade:</strong> Segunda a Sexta, 18h às 20h</p>
+      </div>
+
+      <hr>
+
+      <!-- FUVEST -->
+      <div class="aula-container">
+        <div class="img">
+          <h1 class="vestibular">Fuvest</h1>
+          <img src="../img/fuvest.png" alt="Fuvest">
+          <button class="inscrever-btn" onclick="toggleForm('form-fuvest')">Me Inscrever</button>
+        </div>
+        <div class="form-inscricao" id="form-fuvest">
+          <input type="text" placeholder="Nome completo" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Telefone" required>
+          <button class="finalizar" type="submit">Finalizar Inscrição</button>
+        </div>
+        <p>Aulas direcionadas para a primeira e segunda fase da Fuvest, com foco em interpretação, raciocínio lógico e resolução de questões autorais da USP. Ideal para quem busca excelência e aprofundamento conceitual.</p>
+        <p><strong>Local:</strong> Online | <strong>Grade:</strong> Terça e Quinta, 17h às 19h</p>
+      </div>
+
+      <hr>
+
+      <!-- ITA -->
+      <div class="aula-container">
+        <div class="img">
+          <h1 class="vestibular">ITA</h1>
+          <img src="../img/ita.png" alt="ITA">
+          <button class="inscrever-btn" onclick="toggleForm('form-ita')">Me Inscrever</button>
+        </div>
+        <div class="form-inscricao" id="form-ita">
+          <input type="text" placeholder="Nome completo" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Telefone" required>
+          <button class="finalizar" type="submit">Finalizar Inscrição</button>
+        </div>
+        <p>Videoaulas aprofundadas de Matemática, Física e Química voltadas para o ITA, com resolução de questões desafiadoras e revisão das provas anteriores. Voltado para alunos que buscam alto desempenho em exatas.</p>
+        <p><strong>Local:</strong> Online | <strong>Grade:</strong> Segunda, Quarta e Sexta, 19h às 21h</p>
+      </div>
+
+      <hr>
+
+      <!-- UNICAMP -->
+      <div class="aula-container">
+        <div class="img">
+          <h1 class="vestibular">Unicamp</h1>
+          <img src="../img/unicamp.png" alt="Unicamp">
+          <button class="inscrever-btn" onclick="toggleForm('form-unicamp')">Me Inscrever</button>
+        </div>
+        <div class="form-inscricao" id="form-unicamp">
+          <input type="text" placeholder="Nome completo" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Telefone" required>
+          <button class="finalizar" type="submit">Finalizar Inscrição</button>
+        </div>
+        <p>Curso completo com aulas de todas as disciplinas cobradas pela Unicamp. Conteúdo abordado de forma interdisciplinar, com ênfase em atualidades científicas e sociais, estimulando o pensamento crítico do aluno.</p>
+        <p><strong>Local:</strong> Online | <strong>Grade:</strong> Segunda a Sexta, 16h às 18h</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <small>Facylita — TCC</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviço: Apostilas - Facylita</title>
+  <link rel="stylesheet" href="../css/servico-apostila.css" />
+  <script>
+    function toggleForm(id) {
+      const form = document.getElementById(id);
+      form.style.display = (form.style.display === "flex") ? "none" : "flex";
+    }
+
+    function mostrarCamposPagamento(select) {
+      const container = select.closest('.form-comprar'); // pega o form correto
+      const cartao = container.querySelector(".cartao-info");
+      const boleto = container.querySelector(".boleto-info");
+
+      if(cartao) cartao.style.display = "none";
+      if(boleto) boleto.style.display = "none";
+
+      if (select.value === "cartao" && cartao) cartao.style.display = "flex";
+      if (select.value === "boleto" && boleto) boleto.style.display = "flex";
+    }
+  </script>
+  
+</head>
+<body>
+  <header>
+    <div class="voltar">
+      <a id="voltar" href="../index.html">< Voltar</a>
+      <h1>Apostilas</h1>
+      <p>Apostilas ENEM, Fuvest, ITA e Unicamp.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="apostilas">
+
+      <!-- ENEM -->
+      <div class="apostila-enem">
+        <div class="apostila-container">
+          <div class="img">
+            <h1 class="titulo">ENEM</h1>
+            <img src="../img/apostila-enem.png" alt="apostila-enem">
+            <button class="comprar-btn" onclick="toggleForm('form-enem')">Comprar</button>
+          </div>
+
+          <div class="form-comprar" id="form-enem">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Quantidade" min="1" value="1" required>
+            <select required onchange="mostrarCamposPagamento(this)">
+              <option value="" disabled selected>Forma de pagamento</option>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto Bancário</option>
+            </select>
+            <div class="cartao-info" style="display:none; flex-direction: column; gap:5px;">
+              <input type="text" placeholder="Número do cartão" required>
+              <input type="text" placeholder="Validade (MM/AA)" required>
+              <input type="text" placeholder="CVV" required>
+            </div>
+            <div class="boleto-info" style="display:none;">
+              <input type="text" placeholder="CPF" required>
+            </div>
+            <button type="submit">Finalizar Compra</button>
+          </div>
+
+          <table>
+            <tr>
+                <th>Matemática</th>
+                <td>Álgebra, funções, geometria (plana e espacial), estatística e probabilidade, porcentagem, progressões, análise combinatória simples, interpretação de gráficos, matemática financeira (juros).</td>
+            </tr>
+            <tr>
+                <th>Física</th>
+                <td>Mecânica (movimento, forças, trabalho e energia), termologia, óptica, ondas, eletromagnetismo básico, eletricidade.</td>
+            </tr>
+            <tr>
+                <th>Química</th>
+                <td>Química geral (elementos, tabela periódica, ligações químicas, reações químicas simples), físico-química básica (termodinâmica, equilíbrio químico), química orgânica básica, noções de meio ambiente / química ambiental.</td>
+            </tr>
+            <tr>
+                <th>Português</th>
+                <td>Interpretação de textos literários e não literários, gêneros textuais, coesão e coerência, morfologia e sintaxe aplicada, gramática no uso (ortografia, pontuação, crase, concordância, regência), variação linguística.</td>
+            </tr>
+            <tr>
+                <th>História</th>
+                <td>História do Brasil (colonização, escravidão, república, movimentos sociais), história geral (Idade Média, Moderna, Contemporânea), cultura e sociedade, globalização, direitos humanos, história contemporânea.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- FUVEST -->
+      <div class="apostila-fuvest">
+        <div class="apostila-container">
+          <div class="img">
+            <h1 class="titulo">Fuvest</h1>
+            <img src="../img/apostila-fuvest.png" alt="apostila-fuvest">
+            <button class="comprar-btn" onclick="toggleForm('form-fuvest')">Comprar</button>
+          </div>
+
+          <div class="form-comprar" id="form-fuvest">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Quantidade" min="1" value="1" required>
+            <select required onchange="mostrarCamposPagamento(this)">
+              <option value="" disabled selected>Forma de pagamento</option>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto Bancário</option>
+            </select>
+            <div class="cartao-info" style="display:none; flex-direction: column; gap:5px;">
+              <input type="text" placeholder="Número do cartão" required>
+              <input type="text" placeholder="Validade (MM/AA)" required>
+              <input type="text" placeholder="CVV" required>
+            </div>
+            <div class="boleto-info" style="display:none;">
+              <input type="text" placeholder="CPF" required>
+            </div>
+            <button type="submit">Finalizar Compra</button>
+          </div>
+
+          <table>
+            <tr>
+                <th>Matemática</th>
+                <td>Álgebra (equações, sistemas), funções (polinomiais, exponenciais), geometria (plana, espacial, analítica), trigonometria, probabilidade e estatística, sequências e progressões; costuma ter problemas com níveis maiores na 2ª fase.</td>
+            </tr>
+            <tr>
+                <th>Física</th>
+                <td>Mecânica, termologia / calor, óptica, ondas, eletricidade / magnetismo, física moderna (em menor grau).</td>
+            </tr>
+            <tr>
+                <th>Química</th>
+                <td>Química geral e inorgânica, fisico-química (equilíbrio, termodinâmica, cinética), química orgânica básica, compostos e reações, química ambiental.</td>
+            </tr>
+            <tr>
+                <th>Português</th>
+                <td>Literatura (obras exigidas), interpretação literária, movimentos literários, análise de poemas e prosa, gramática normativa, sintaxe, estilo literário.</td>
+            </tr>
+            <tr>
+                <th>História</th>
+                <td>História do Brasil (todos os períodos), história geral (Europa moderna, revoluções, Guerras Mundiais, Guerra Fria), história da América, história política e social.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- ITA -->
+      <div class="apostila-ita">
+        <div class="apostila-container">
+          <div class="img">
+            <h1 class="titulo">ITA</h1>
+            <img src="../img/apostila-ita.png" alt="apostila-ita">
+            <button class="comprar-btn" onclick="toggleForm('form-ita')">Comprar</button>
+          </div>
+
+          <div class="form-comprar" id="form-ita">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Quantidade" min="1" value="1" required>
+            <select required onchange="mostrarCamposPagamento(this)">
+              <option value="" disabled selected>Forma de pagamento</option>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto Bancário</option>
+              
+            </select>
+            <div class="cartao-info" style="display:none; flex-direction: column; gap:5px;">
+              <input type="text" placeholder="Número do cartão" required>
+              <input type="text" placeholder="Validade (MM/AA)" required>
+              <input type="text" placeholder="CVV" required>
+            </div>
+            <div class="boleto-info" style="display:none;">
+              <input type="text" placeholder="CPF" required>
+            </div>
+            <button type="submit">Finalizar Compra</button>
+          </div>
+
+          <table>
+            <tr>
+                <th>Matemática</th>
+                <td>Todos os temas de Matemática do ensino médio com profundidade.</td>
+            </tr>
+            <tr>
+                <th>Física</th>
+                <td>Física completa do ensino médio com profundidade.</td>
+            </tr>
+            <tr>
+                <th>Química</th>
+                <td>Química completa, incluindo orgânica e análises experimentais.</td>
+            </tr>
+            <tr>
+                <th>Português</th>
+                <td>Interpretação de textos, gramática normativa, leitura literária.</td>
+            </tr>
+            <tr>
+                <th>História</th>
+                <td>História geral e do Brasil suficiente para interpretação e contexto histórico.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- UNICAMP -->
+      <div class="apostila-unicamp">
+        <div class="apostila-container">
+          <div class="img">
+            <h1 class="titulo">Unicamp</h1>
+            <img src="../img/apostila-unicamp.png" alt="apostila-unicamp">
+            <button class="comprar-btn" onclick="toggleForm('form-unicamp')">Comprar</button>
+          </div>
+
+          <div class="form-comprar" id="form-unicamp">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="Email" required>
+            <input type="number" placeholder="Quantidade" min="1" value="1" required>
+            <select required onchange="mostrarCamposPagamento(this)">
+              <option value="" disabled selected>Forma de pagamento</option>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="boleto">Boleto Bancário</option>
+              
+            </select>
+            <div class="cartao-info" style="display:none; flex-direction: column; gap:5px;">
+              <input type="text" placeholder="Número do cartão" required>
+              <input type="text" placeholder="Validade (MM/AA)" required>
+              <input type="text" placeholder="CVV" required>
+            </div>
+            <div class="boleto-info" style="display:none;">
+              <input type="text" placeholder="CPF" required>
+            </div>
+            <button type="submit">Finalizar Compra</button>
+          </div>
+
+          <table>
+            <tr>
+                <th>Matemática</th>
+                <td>Funções, geometria plana, geometria analítica, polinômios, sistemas lineares, progressões, estatística e probabilidade.</td>
+            </tr>
+            <tr>
+                <th>Física</th>
+                <td>Mecânica, cinemática, termologia, eletricidade, óptica e ondulatória.</td>
+            </tr>
+            <tr>
+                <th>Química</th>
+                <td>Química geral e físico-química, química orgânica, química ambiental e aplicações.</td>
+            </tr>
+            <tr>
+                <th>Português</th>
+                <td>Literatura brasileira, teoria literária, movimentos literários, interpretação de textos.</td>
+            </tr>
+            <tr>
+                <th>História</th>
+                <td>História geral, história do Brasil, história regional, movimentos sociais, história contemporânea.</td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <div class="footer">
+      <small>Facylita — TCC</small>
+    </div>
+  </main>
+</body>
+</html>

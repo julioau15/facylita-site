@@ -1,0 +1,249 @@
+:root {
+    --Primary-color: #ff0713dc;
+    --Secondary-color: #000000;
+    --Gradient: linear-gradient(#ff0713dc, #000000);
+}
+
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    background: var(--Gradient);
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 10px 0 5px;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+.voltar a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    top: 3vw;
+    left: 2vw;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* ===== APOSTILAS ===== */
+#apostilas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.apostila-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.apostila-container .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.apostila-container .img .titulo {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.apostila-container img {
+    max-width: 200px;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+/* ===== TABELAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+th {
+    background-color: rgba(255,255,255,0.9);
+    color: var(--Secondary-color);
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+}
+
+td {
+    background-color: rgba(255,255,255,0.8);
+    font-size: 15px;
+    color: var(--Secondary-color);
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #fff;
+    margin: 30px 0;
+}
+
+.footer {
+    margin: 20px 0;
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* ===== BOTÕES ===== */
+.comprar-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.comprar-btn:hover {
+    background-color: #00a000;
+    transform: scale(1.05);
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-comprar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    color: #000;
+}
+
+.form-comprar input,
+.form-comprar select,
+.form-comprar button {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-comprar select {
+    cursor: pointer;
+}
+
+.form-comprar button {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-comprar button:hover {
+    background-color: #00a000;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    .apostila-container {
+        width: 95%;
+        padding: 15px;
+    }
+    .apostila-container img {
+        max-width: 180px;
+    }
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #voltar {
+        top: 4vh;
+        left: 7vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .apostila-container img {
+        max-width: 150px;
+    }
+    .form-comprar {
+        padding: 10px;
+    }
+    .form-comprar input,
+    .form-comprar select,
+    .form-comprar button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    .comprar-btn {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    .voltar a {
+        font-size: 1.2rem;
+        top: 4vh;
+        left: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .apostila-container img {
+        max-width: 120px;
+    }
+    .form-comprar {
+        padding: 8px;
+    }
+    .form-comprar input,
+    .form-comprar select,
+    .form-comprar button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .comprar-btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
