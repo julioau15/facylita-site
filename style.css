@@ -166,9 +166,6 @@ footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
-  .sobre-container {
-    width: 85%;
-  }
 
   .sobre-texto h1 {
     font-size: 2.5rem;
@@ -177,24 +174,6 @@ footer {
   .sobre-texto p {
     font-size: 1.3rem;
     margin: 30px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  header .link-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  nav{
-    display: none;
-  }
-
-  header .brand {
-    font-size: 1.8rem;
-  }
-
-  header nav {
-    display: none;
   }
 
   .sobre-container {
@@ -218,6 +197,48 @@ footer {
   .card-sobre p{
   text-align:justify;
   margin:0 1vw;
+  font-size:1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .link-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav{
+    display: none;
+  }
+
+  header .brand {
+    font-size: 1.8rem;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .sobre-container {
+    width: 95%;
+    margin: 20px 10px;
+  }
+
+  .sobre-texto h1 {
+    font-size: 2rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+  }
+
+  .card-sobre{
+    text-align: left;
+  }
+
+  .card-sobre p{
+  text-align:justify;
+  margin:0 10px;
   font-size:1.1rem;
   }
 
