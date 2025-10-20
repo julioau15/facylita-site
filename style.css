@@ -215,6 +215,12 @@ footer {
     text-align: left;
   }
 
+  .card-sobre p{
+  text-align:justify;
+  margin:0 1vw;
+  font-size:1.1rem;
+  }
+
   .card-produtos,
   .card-departamento {
     max-width: 95%;
