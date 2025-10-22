@@ -1,7 +1,7 @@
 :root{
   --Primary-color:#ff0713dc;
   --Secondary-color:#000000;
-  --Gradient: linear-gradient(#ff0713dc, #000000);
+  --Gradient: linear-gradient(#a51313dc,#7a0f0f, #4d0909);
 }
 
 body {
@@ -161,9 +161,23 @@ footer{
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px){
-  .aula-container{
+
+  main{
     width: 95%;
-    padding: 15px;
+    padding: 0;
+    margin:0;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .aula-container{
+    width: fit-content;
+    padding: 5px 10px;
   }
 
   .aula-container img{
